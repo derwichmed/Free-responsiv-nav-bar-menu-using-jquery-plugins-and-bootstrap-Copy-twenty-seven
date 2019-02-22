@@ -1,0 +1,123 @@
+header{
+    padding: 10px
+}
+header > div{
+    background-image: linear-gradient(to bottom,#8edb11,#70b103);
+    border-radius: 5px;
+    border: #588c15 1px solid;
+}
+header .nav_bar .nav_bar_item{
+    display: inline-block;
+    cursor: pointer
+}
+header .nav_bar .nav_bar_item > div{
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 10px;
+    position: relative
+}
+header .nav_bar .nav_bar_item .icon{
+    float: left;
+    width: 18px;
+    height: 18px;
+    margin-right: 10px
+}
+header .nav_bar .nav_bar_item > div > .label{
+    font-family: "Raleway";
+    text-transform: none;
+    letter-spacing: 0px;
+    color: #a5ef4f;
+    font-weight: bold;
+    font-size: 15px;
+}
+.nav_bar_item_click{
+    background-color: white;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border: #588c15 1px solid;
+    border-bottom: none;
+}
+header .nav_bar .nav_bar_item .sub_menu{
+    background-color: #70b103;
+    border-radius: 5px;
+    border: #588c15 1px solid;
+    width: 200px;
+    padding-top: 10px;
+    display: none
+}
+header .nav_bar .nav_bar_item .sub_menu_border{
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    top: 28px;
+    z-index: 6000;
+    display: none
+}
+header .nav_bar .nav_bar_item .sub_menu .sub_menu_item{
+    width: 100%;
+    color: white;
+    padding-left: 20px;
+    font-family: "Raleway";
+    text-transform: none;
+    letter-spacing: 0px;
+    color: #a5ef4f;
+    font-weight: bold;
+    font-size: 15px;
+}
+header .nav_bar .nav_bar_item .sub_menu .sub_menu_item:hover{
+    background-color: #a5ef4f;
+    color: #70b103
+}
+header .nav_bar .nav_bar_item .sub_menu .sub_menu_item:last-child{
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px
+}
+header .nav_bar .nav_bar_item .sub_menu .sub_menu_item > div{
+    position: relative;
+    padding-top: 15px
+}
+.mobile_navs{
+    display: none;
+}
+.mobile_navs #menu_icon img{
+    width: 35px;
+    height: 35px
+}
+@media(min-width: 900px){
+    header > div{
+        height: 60px;
+        padding-top: 10px
+    }
+    header .nav_bar .nav_bar_item .sub_menu{
+        position: absolute;
+        left: 0;
+        top: 115%;
+        z-index: 5000;   
+    }   
+    header .nav_bar .nav_bar_item .sub_menu .sub_menu_item .sub_menu{
+        top: 0;
+        left: 100%
+    }
+    header .nav_bar .nav_bar_item > div{
+        height: 49px;
+    }
+    header .nav_bar .nav_bar_item .sub_menu .sub_menu_item{
+        height: 50px
+    }
+}
+@media(max-width: 900px){
+    .mobile_navs{
+        display: block
+    }
+    header .nav_bar{
+        display: none
+    }
+    header .nav_bar .nav_bar_item{
+        display: block;
+        width: 100%;
+    }
+    header .nav_bar .nav_bar_item .sub_menu{
+        width: 100%
+    }
+    
+}
